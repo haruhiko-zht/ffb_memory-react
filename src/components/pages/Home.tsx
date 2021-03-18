@@ -41,14 +41,14 @@ const Home: FC = () => (
               <img src={twitterBanner} alt="twitter banner" />
             </a>
           </div>
-          <div className="news-content-sub">
-            <div className="news-tab">
-              <a href="/">
-                <span className="hide">NEWS</span>
-              </a>
-            </div>
-            <div className="news-update">update here.</div>
+        </div>
+        <div className="news-content-sub">
+          <div className="news-tab">
+            <a href="/">
+              <span className="hide">NEWS</span>
+            </a>
           </div>
+          <div className="news-update">update here.</div>
         </div>
       </section>
     </main>
