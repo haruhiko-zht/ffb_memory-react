@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import HamburgerMenuButton from '../molecules/HamburgerMenuButton';
 import './Header.scss';
 import logo from '../../images/app/logo.png';
 
@@ -19,11 +20,7 @@ const Header: FC = () => (
       </div>
 
       {/* sp toggle menu button */}
-      <a href="/" className="menu-trigger">
-        <span />
-        <span />
-        <span />
-      </a>
+      <HamburgerMenuButton />
     </div>
 
     {/* responsive modal back */}

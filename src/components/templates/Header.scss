@@ -40,62 +40,6 @@
     }
   }
 
-  .menu-trigger {
-    position: relative;
-    top: 13px;
-    display: none;
-    // z-index: 5;
-    width: 40px;
-    height: 30px;
-    transition: all 0.4s;
-
-    @include mq(md) {
-      display: inline-block;
-    }
-
-    span {
-      position: absolute;
-      left: 0;
-      display: inline-block;
-      width: 100%;
-      height: 3px;
-      background-color: #fff;
-      border-radius: 4px;
-      transition: all 0.4s;
-
-      &:nth-of-type(1) {
-        top: 0;
-      }
-
-      &:nth-of-type(2) {
-        top: 13px;
-      }
-
-      &:nth-of-type(3) {
-        bottom: 0;
-      }
-    }
-
-    &.active span {
-      &:nth-of-type(1) {
-        // -webkit-transform: translateY(-120px, 13px) rotate(-45deg);
-        // transform: translate(-32vw, 13px) rotate(-45deg);
-        opacity: 0;
-      }
-
-      &:nth-of-type(2) {
-        // transform: translateX(-32vw);
-        opacity: 0;
-      }
-
-      &:nth-of-type(3) {
-        // -webkit-transform: translateY(-120px, -13px) rotate(45deg);
-        // transform: translate(-32vw, -13px) rotate(45deg);
-        opacity: 0;
-      }
-    }
-  }
-
   .responsive-menu-back {
     position: fixed;
     top: 0;
