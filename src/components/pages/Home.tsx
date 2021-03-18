@@ -10,7 +10,7 @@ const Home: FC = () => (
   <>
     <Header />
     <main className="index">
-      <p>あたま悪いFFB偽攻略サイト</p>
+      <p className="menu-desc">あたま悪いFFB偽攻略サイト</p>
 
       {/* link contents */}
       <section className="links-content">
