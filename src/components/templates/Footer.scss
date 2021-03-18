@@ -1,0 +1,57 @@
+@import '../../reset';
+@import '../../variable';
+@import '../../responsive';
+@import '../../common';
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+
+  .normal {
+    line-height: 50px;
+    color: white;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  .responsive {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    background: #eee;
+    box-shadow: 0 0 1px #666;
+
+    @include mq(md) {
+      display: flex;
+    }
+
+    .bottom-menu-item {
+      &:nth-child(1) {
+        opacity: 0.5;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(3) {
+        line-height: 50px;
+      }
+
+      .bottom-menu-icon {
+        display: block;
+      }
+
+      .bottom-menu-caption {
+        display: block;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// Font
+$font-family_default: 游ゴシック体, 'Yu Gothic', yugothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, meiryo, osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$font-family_logo: 'Srisakdi', cursive;
+
+// Font-Size
+$font-size_s: 1rem;
+$font-size_m: 1.4rem;
+$font-size_default: 1.6rem;
+$font-size_l: 2.6rem;
+$font-size_xl: 4.2rem;
+$font-size_xxl: 11rem;
+$font-size_xxl: 18rem;
+
+// Pixel-Space
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_xxl: 30px;
+$space_3l: 40px;
+
+// Mixin
+@mixin bg-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

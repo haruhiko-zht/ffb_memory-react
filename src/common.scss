@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+@import 'variable';
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* フォントレンダリング設定: 1x解像度ではsubpixel、2x以上の解像度ではgrayscale */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media only screen and
+  (-webkit-min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+html {
+  font-size: 62.5%;
+} //10px
+
+body {
+  overflow-x: hidden;
+  font-family: $font-family_default;
+  font-size: $font-size_default;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  position: relative;
+  padding: 1.5rem 0;
+  margin: 30px 0 15px;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+}
+
+h3::before,
+h3::after {
+  position: absolute;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 6px;
+  content: '';
+}
+
+h3::before {
+  top: 0;
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+h3::after {
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+h4 {
+  padding: 0.25em 0 0.5em 0.75em;
+  margin: 20px 0 5px;
+  border-bottom: 1px solid #ccc;
+  border-left: 6px solid #ccc;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 1.2rem 0;
+  font-size: $font-size_default;
+}
+
+li {
+  font-size: $font-size_default;
+
+  p {
+    font-size: $font-size_default;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+table {
+  width: 100%;
+  font-size: $font-size_m;
+  background: #eaebec;
+  border: #ccc 1px solid;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+table th {
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ededed, #ebebeb);
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+table th:first-child {
+  text-align: left;
+}
+
+table tr:first-child th:first-child {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+table tr:first-child th:last-child {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+table tr {
+  text-align: center;
+  // padding-left:20px;
+}
+
+table td {
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+  background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+}
+
+table td:first-child {
+  width: 15%;
+  text-align: left;
+  border-left: 0;
+}
+
+table td:nth-of-type(2) {
+  width: 25%;
+  text-align: left;
+}
+
+table td:nth-of-type(3) {
+  width: 20%;
+  text-align: right;
+}
+
+table td:nth-of-type(4) {
+  width: 10%;
+}
+
+table td:nth-of-type(5) {
+  width: 20%;
+}
+
+table tr.even td {
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+  background: -moz-linear-gradient(top, #f8f8f8, #f6f6f6);
+}
+
+table tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+table tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+tr[class*='hidden-'] {
+  display: none;
+}
+
+// Utility
+.red {
+  color: #f00;
+}
+
+.green {
+  color: #32cd32;
+}
+
+.blue {
+  color: #00bfff;
+}
+
+.violet {
+  color: #90f;
+}
+
+.magenta {
+  color: #f0f;
+}
+
+.del {
+  text-decoration: line-through;
+}
+
+.link-visible a {
+  text-decoration: underline solid blue;
+}
+
+.hide {
+  display: none;
+}
