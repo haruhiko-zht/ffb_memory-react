@@ -2,6 +2,7 @@ import { FC, useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router';
 
 import Home from 'components/pages/Home';
+import Survey from './components/pages/Survey';
 import './App.scss';
 
 const App: FC = () => {
@@ -16,6 +17,7 @@ const App: FC = () => {
       <div className="main-bg" />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/survey" element={<Survey />} />
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>
     </>

@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
+
 import HamburgerMenuButton from '../molecules/HamburgerMenuButton';
 import './Header.scss';
 import logo from '../../images/app/logo.png';
@@ -34,52 +36,52 @@ const Header: FC = () => (
       </label>
       <ul>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>TOP</span>
             <span>トップ</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>CAPTURE</span>
             <span>攻略備忘録</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/survey">
             <span>SURVEY</span>
             <span>調査備忘録</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>ALCHEMY</span>
             <span>レシピ&鉱石</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>OLD</span>
             <span>旧サーバー</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>PICTURE</span>
             <span>画像倉庫</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>TOOL</span>
             <span>ツール</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="btn" href="/">
+          <Link className="btn" to="/">
             <span>LINK</span>
             <span>リンク</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
