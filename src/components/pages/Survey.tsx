@@ -1,13 +1,48 @@
 import { FC } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
-import Header from '../templates/Header';
-import Content from '../templates/Content';
-import Footer from '../templates/Footer';
+import './Survey.scss';
+import Header from 'components/templates/Header';
+import Footer from 'components/templates/Footer';
+import { Article } from 'data/articles';
 
-const Survey: FC = () => (
+type Props = {
+  category: string;
+  articles: Article[];
+};
+
+const Survey: FC<Props> = ({ category, articles }) => (
   <>
     <Header />
-    <Content title="調査備忘録" />
+    <main>
+      <div className="main-title">
+        <div className="title-wrap">
+          <h2>{category}</h2>
+        </div>
+      </div>
+      <div className="contents">
+        <div className="wrap">
+          <div className="main-col">
+            {/* left column */}
+            <aside className="left-col">
+              <ul>
+                {articles.map((article) => (
+                  <li key={article.id}>
+                    <Link to={`/survey/${article.id}`}>{article.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+            <div className="left-col-back" />
+
+            {/* right column */}
+            <article className="right-col">
+              <Outlet />
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
     <Footer />
   </>
 );
