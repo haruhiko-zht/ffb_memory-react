@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
-import './Survey.scss';
+import 'components/pages/Survey.scss';
 import Header from 'components/templates/Header';
 import Footer from 'components/templates/Footer';
 import { Article } from 'data/articles';
@@ -13,6 +14,9 @@ type Props = {
 
 const Survey: FC<Props> = ({ category, articles }) => (
   <>
+    <Helmet>
+      <title>調査備忘録 | FFB memory</title>
+    </Helmet>
     <Header />
     <main>
       <div className="main-title">
