@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import HamburgerMenuButton from '../molecules/HamburgerMenuButton';
-import './Header.scss';
-import logo from '../../images/app/logo.png';
+import HamburgerMenuButton from 'components/molecules/HamburgerMenuButton';
+import 'components/templates/Header.scss';
+import logo from 'images/app/logo.png';
 
 const Header: FC = () => (
   <header className="header">
@@ -60,7 +60,7 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/old-server">
             <span>OLD</span>
             <span>旧サーバー</span>
           </Link>
