@@ -6,6 +6,7 @@ import 'App.scss';
 import Home from 'components/pages/Home';
 import Survey from 'containers/pages/Survey';
 import SurveyContent from 'containers/organisms/SurveyContent';
+import OldServer from 'components/pages/OldServer';
 
 const App: FC = () => {
   const { hash, pathname } = useLocation();
@@ -26,7 +27,7 @@ const App: FC = () => {
           <Route path="/" element={<></>} />
           <Route path=":articleId" element={<SurveyContent />} />
         </Route>
-        <Route path="old-server" element={<></>} />
+        <Route path="old-server" element={<OldServer />} />
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>
     </>
