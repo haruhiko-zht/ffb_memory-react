@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 
 import 'App.scss';
 import Home from 'components/pages/Home';
-import Survey from 'containers/pages/Survey';
-import SurveyContent from 'containers/organisms/SurveyContent';
+import Survey from 'components/pages/Survey';
 import OldServer from 'components/pages/OldServer';
+import ArticleContent from 'containers/organisms/ArticleContent';
 
 const App: FC = () => {
   const { hash, pathname } = useLocation();
@@ -25,9 +25,18 @@ const App: FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="survey" element={<Survey />}>
           <Route path="/" element={<></>} />
-          <Route path=":articleId" element={<SurveyContent />} />
+          <Route
+            path=":articleId"
+            element={<ArticleContent categoryCode="survey" />}
+          />
         </Route>
-        <Route path="old-server" element={<OldServer />} />
+        <Route path="oldServer" element={<OldServer />}>
+          <Route path="/" element={<></>} />
+          <Route
+            path=":articleId"
+            element={<ArticleContent categoryCode="oldServer" />}
+          />
+        </Route>
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>
     </>

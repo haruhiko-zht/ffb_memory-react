@@ -2,10 +2,13 @@ import { FC } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import { articleData } from 'data/articles';
-import SurveyContent from 'components/organisms/SurveyContent';
+import ArticleContent from 'components/organisms/ArticleContent';
 
-const EnhancedSurveyContent: FC = () => {
-  const categoryCode = 'survey';
+type Props = {
+  categoryCode: string;
+};
+
+const EnhancedArticleContent: FC<Props> = ({ categoryCode }) => {
   const { articleId } = useParams();
   const { articles } = articleData[categoryCode];
   const article = articles.find(
@@ -13,10 +16,10 @@ const EnhancedSurveyContent: FC = () => {
   );
 
   if (article) {
-    return <SurveyContent content={article.content} />;
+    return <ArticleContent Content={article.content} />;
   }
 
   return <Navigate to="/" replace />;
 };
 
-export default EnhancedSurveyContent;
+export default EnhancedArticleContent;

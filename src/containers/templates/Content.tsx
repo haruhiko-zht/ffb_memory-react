@@ -2,19 +2,28 @@ import { FC } from 'react';
 import { Navigate } from 'react-router';
 
 import { articleData } from 'data/articles';
-import Survey from 'components/pages/Survey';
+import Content from 'components/templates/Content';
 
-const EnhancedSurvey: FC = () => {
-  const categoryCode = 'survey';
+type Props = {
+  categoryCode: string;
+};
+
+const EnhancedContent: FC<Props> = ({ categoryCode }) => {
   const categoryCodeList = Object.keys(articleData);
 
   if (categoryCodeList.includes(categoryCode)) {
     const { category, articles } = articleData[categoryCode];
 
-    return <Survey category={category} articles={articles} />;
+    return (
+      <Content
+        categoryCode={categoryCode}
+        category={category}
+        articles={articles}
+      />
+    );
   }
 
   return <Navigate to="/" replace />;
 };
 
-export default EnhancedSurvey;
+export default EnhancedContent;
