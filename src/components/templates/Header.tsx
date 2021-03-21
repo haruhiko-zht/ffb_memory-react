@@ -60,7 +60,7 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/old-server">
+          <Link className="btn" to="/oldServer">
             <span>OLD</span>
             <span>旧サーバー</span>
           </Link>
