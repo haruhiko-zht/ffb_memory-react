@@ -1,6 +1,5 @@
 import { FC, useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router';
-import { Helmet } from 'react-helmet';
 
 import 'App.scss';
 import Home from 'components/pages/Home';
@@ -17,9 +16,6 @@ const App: FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>FFB memory</title>
-      </Helmet>
       <div className="main-bg" />
       <Routes>
         <Route path="/" element={<Home />} />
