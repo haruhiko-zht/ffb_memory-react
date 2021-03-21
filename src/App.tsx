@@ -5,6 +5,7 @@ import 'App.scss';
 import Home from 'components/pages/Home';
 import Survey from 'components/pages/Survey';
 import OldServer from 'components/pages/OldServer';
+import Links from 'components/pages/Links';
 import ArticleContent from 'containers/organisms/ArticleContent';
 
 const App: FC = () => {
@@ -33,6 +34,7 @@ const App: FC = () => {
             element={<ArticleContent categoryCode="oldServer" />}
           />
         </Route>
+        <Route path="links" element={<Links />} />
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>
     </>
