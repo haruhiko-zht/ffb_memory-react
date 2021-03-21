@@ -1,0 +1,70 @@
+@import '../../reset';
+@import '../../variable';
+@import '../../responsive';
+@import '../../common';
+
+.link-wrap {
+  input[type='radio'] {
+    display: none;
+  }
+
+  #link-area div[id*='link'] {
+    display: none;
+  }
+  #tab1:checked ~ #link-area #link1 { display: block; }
+  #tab1:checked ~ #link-tab .link1_label { opacity: 1; }
+  #tab2:checked ~ #link-area #link2 { display: block; }
+  #tab2:checked ~ #link-tab .link2_label { opacity: 1; }
+  #tab3:checked ~ #link-area #link3 { display: block; }
+  #tab3:checked ~ #link-tab .link3_label { opacity: 1; }
+  #tab4:checked ~ #link-area #link4 { display: block; }
+  #tab4:checked ~ #link-tab .link4_label { opacity: 1; }
+}
+
+#link-tab {
+  display: flex;
+  justify-content: space-around;
+
+  label {
+    display: block;
+    flex-grow: 1;
+    padding: $space_m;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+#link-area {
+  h3 {
+    margin: initial;
+  }
+
+  th {
+    @include mq() {
+      display: block;
+      width: 100%;
+    }
+
+    padding: $space_m;
+    text-align: center;
+    vertical-align: middle;
+
+    a {
+      display: block;
+    }
+  }
+
+  td {
+    padding-left: $space_m;
+    text-align: left;
+    vertical-align: middle;
+
+    @include mq() {
+      display: block;
+      width: 100%;
+      padding: $space_s;
+    }
+  }
+}
