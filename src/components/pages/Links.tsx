@@ -11,7 +11,7 @@ const Links: FC = () => (
       <title>リンク | FFB memory</title>
     </Helmet>
     <Header />
-    <main>
+    <main className="main-article">
       <div className="main-title">
         <div className="title-wrap">
           <h2>リンク</h2>
@@ -20,10 +20,11 @@ const Links: FC = () => (
 
       <article className="contents">
         <div className="wrap wrap-1col link-wrap">
-          <input id="tab1" type="radio" name="link_btn" />
+          <input id="tab1" type="radio" name="link_btn" defaultChecked />
           <input id="tab2" type="radio" name="link_btn" />
           <input id="tab3" type="radio" name="link_btn" />
           <input id="tab4" type="radio" name="link_btn" />
+
           <div id="link-tab">
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className="link1_label" htmlFor="tab1">
@@ -65,7 +66,7 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      FFBXOOPS
+                      FFB XOOPS
                     </a>
                   </th>
                   <td>総合コミュニティ</td>
