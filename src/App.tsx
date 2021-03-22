@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router';
 
 import 'App.scss';
 import Home from 'components/pages/Home';
+import Capture from 'components/pages/Capture';
 import Survey from 'components/pages/Survey';
 import OldServer from 'components/pages/OldServer';
 import Links from 'components/pages/Links';
@@ -21,6 +22,13 @@ const App: FC = () => {
       <div className="app">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="capture" element={<Capture />}>
+            <Route path="/" element={<></>} />
+            <Route
+              path=":articleId"
+              element={<ArticleContent categoryCode="capture" />}
+            />
+          </Route>
           <Route path="survey" element={<Survey />}>
             <Route path="/" element={<></>} />
             <Route
