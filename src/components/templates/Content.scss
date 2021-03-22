@@ -3,6 +3,12 @@
 @import '../../responsive';
 @import '../../common';
 
+.main-article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow-y: auto;
+}
+
 // Page-title Area
 .main-title {
   height: 5rem;
@@ -13,7 +19,7 @@
 
 // Page-title
 .title-wrap {
-  max-width: 980px;
+  max-width: 1200px;
   margin: 0 auto;
 
   @include mq(md) {
@@ -31,7 +37,7 @@
 // Wrapper
 .wrap {
   width: 100%;
-  max-width: 980px;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
@@ -47,6 +53,8 @@
 .main-col {
   position: relative;
   display: flex;
+  height: 100%;
+  overflow-y: auto;
 }
 
 // Left Column

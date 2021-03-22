@@ -56,8 +56,8 @@ const Home: FC = () => (
           <div className="news-update">update here.</div>
         </div>
       </section>
+      <div className="bottom-logo">FFB memory</div>
     </main>
-    <div className="bottom-logo">FFB memory</div>
     <Footer />
   </>
 );

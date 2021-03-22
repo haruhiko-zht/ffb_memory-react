@@ -17,26 +17,28 @@ const App: FC = () => {
 
   return (
     <>
-      <div className="main-bg" />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="survey" element={<Survey />}>
-          <Route path="/" element={<></>} />
-          <Route
-            path=":articleId"
-            element={<ArticleContent categoryCode="survey" />}
-          />
-        </Route>
-        <Route path="oldServer" element={<OldServer />}>
-          <Route path="/" element={<></>} />
-          <Route
-            path=":articleId"
-            element={<ArticleContent categoryCode="oldServer" />}
-          />
-        </Route>
-        <Route path="links" element={<Links />} />
-        <Route path="*" element={<Navigate to="/" replace />} />;
-      </Routes>
+      <div className="app-bg" />
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="survey" element={<Survey />}>
+            <Route path="/" element={<></>} />
+            <Route
+              path=":articleId"
+              element={<ArticleContent categoryCode="survey" />}
+            />
+          </Route>
+          <Route path="oldServer" element={<OldServer />}>
+            <Route path="/" element={<></>} />
+            <Route
+              path=":articleId"
+              element={<ArticleContent categoryCode="oldServer" />}
+            />
+          </Route>
+          <Route path="links" element={<Links />} />
+          <Route path="*" element={<Navigate to="/" replace />} />;
+        </Routes>
+      </div>
     </>
   );
 };
