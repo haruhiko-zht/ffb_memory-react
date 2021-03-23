@@ -6,6 +6,7 @@ import Home from 'components/pages/Home';
 import Capture from 'components/pages/Capture';
 import Survey from 'components/pages/Survey';
 import OldServer from 'components/pages/OldServer';
+import Tool from 'components/pages/Tool';
 import Links from 'components/pages/Links';
 import ArticleContent from 'containers/organisms/ArticleContent';
 
@@ -43,6 +44,7 @@ const App: FC = () => {
               element={<ArticleContent categoryCode="oldServer" />}
             />
           </Route>
+          <Route path="tool" element={<Tool />} />
           <Route path="links" element={<Links />} />
           <Route path="*" element={<Navigate to="/" replace />} />;
         </Routes>

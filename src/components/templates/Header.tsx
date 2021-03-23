@@ -72,7 +72,7 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/tool">
             <span>TOOL</span>
             <span>ツール</span>
           </Link>
