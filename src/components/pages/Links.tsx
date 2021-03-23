@@ -5,6 +5,11 @@ import 'components/pages/Links.scss';
 import Header from 'components/templates/Header';
 import Footer from 'components/templates/Footer';
 
+import cof from 'images/links/cof.jpg';
+import marimo from 'images/links/marimo.jpeg';
+import popopo from 'images/links/popopo.jpg';
+import ruri from 'images/links/ruri.jpg';
+
 const Links: FC = () => (
   <>
     <Helmet>
@@ -62,18 +67,6 @@ const Links: FC = () => (
                 <tr>
                   <th>
                     <a
-                      href="http://kroko.jp/ffbxoops/"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      FFB XOOPS
-                    </a>
-                  </th>
-                  <td>総合コミュニティ</td>
-                </tr>
-                <tr>
-                  <th>
-                    <a
                       href="http://kroko.jp/static/gamereview.htm"
                       target="_blank"
                       rel="noreferrer noopener"
@@ -84,30 +77,6 @@ const Links: FC = () => (
                   <td>
                     鉱石が欲しくてレビューする人は注意事項をまず読むといいです。
                   </td>
-                </tr>
-                <tr>
-                  <th>
-                    <a
-                      href="http://kroko.jp/ffbxoops/modules/xpwiki/index.php?newffb%2F%A4%E8%A4%AF%A4%A2%A4%EB%BC%C1%CC%E4"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      FFBよくある質問
-                    </a>
-                  </th>
-                  <td>わりとなうい情報だと思うので参考になると思います。</td>
-                </tr>
-                <tr>
-                  <th>
-                    <a
-                      href="https://kroko.jp/ffbxoops/user.php?xoops_redirect=%2Fffbxoops%2Fmodules%2Fxpwiki%2Findex.php%3F%2525A5%2525C1%2525A5%2525E3%2525A5%2525C3%2525A5%2525C8%2525B3%2525D6%2525CE%2525A5%2525B4%2525F0%2525BD%2525E0"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      隔離基準
-                    </a>
-                  </th>
-                  <td>守らないと罰を受ける基準。</td>
                 </tr>
               </table>
             </div>
@@ -150,16 +119,13 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <img
-                        src="https://haruhiko.xsrv.jp/FFB/img/links/ruri_bana.jpg"
-                        alt=""
-                      />
+                      <img src={ruri} alt="ruri banner" />
                     </a>
                   </th>
                   <td>
                     瑠璃~StarFlower （健全な部隊）
                     <br />
-                    更新は無期限停止ですが副隊長含め、隊員の反応はわりとあります。
+                    レベルランキング始まりの地。
                   </td>
                 </tr>
                 <tr>
@@ -169,10 +135,7 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <img
-                        src="https://haruhiko.xsrv.jp/FFB/img/links/cof_bana.jpg"
-                        alt=""
-                      />
+                      <img src={cof} alt="cof banner" />
                     </a>
                   </th>
                   <td>
@@ -188,10 +151,7 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <img
-                        src="https://haruhiko.xsrv.jp/FFB/img/links/popopo_bana.jpg"
-                        alt=""
-                      />
+                      <img src={popopo} alt="popopo banner" />
                     </a>
                   </th>
                   <td>
@@ -211,9 +171,9 @@ const Links: FC = () => (
                     </a>
                   </th>
                   <td>
-                    廃人の方が集まってくる部隊です。
+                    紅月夜隊
                     <br />
-                    露出頻度は少なめ、全盛期は3～4年前。
+                    廃人の方が集まっていた部隊です。
                   </td>
                 </tr>
                 <tr>
@@ -227,7 +187,7 @@ const Links: FC = () => (
                     </a>
                   </th>
                   <td>
-                    現存部隊では一番アクティブ数が多いです。
+                    ごごご部隊
                     <br />
                     専用chは「gbi」だそうです。通話好きな人はおすすめ。
                   </td>
@@ -239,28 +199,13 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <img
-                        src="https://haruhiko.xsrv.jp/FFB/img/links/marimo_bana.jpeg"
-                        alt=""
-                      />
+                      <img src={marimo} alt="marimo banner" />
                     </a>
                   </th>
                   <td>
                     毬藻同盟
                     <br />
                     「一度はどこかで見た」という有名な人が多い部隊です。
-                  </td>
-                </tr>
-                <tr>
-                  <th>
-                    <h3>破壊の揺り籠</h3>
-                  </th>
-                  <td>
-                    チャンプの装備を破壊するという明確な意思を持った部隊。
-                    <br />
-                    部隊の目的が他と差別化されており、一際目立ちました。
-                    <br />
-                    誰かが怒ると怖い（サブ15体ぐらいでチャンプ奪還してくる）。
                   </td>
                 </tr>
               </table>
@@ -290,7 +235,7 @@ const Links: FC = () => (
                     </a>
                   </th>
                   <td>
-                    前人未到の500万レベルを達成した方のサイト。部隊は解散して個人運営の模様。
+                    前人未到の570万レベルを達成した方のサイト。部隊は解散して個人運営の模様。
                   </td>
                 </tr>
                 <tr>
@@ -303,7 +248,7 @@ const Links: FC = () => (
                       <h3>あるとぶろぐ</h3>
                     </a>
                   </th>
-                  <td>あるとさんのブログ。500万レベルを目標にした軌跡です。</td>
+                  <td>あるとさんのブログ。500万レベルの軌跡です。</td>
                 </tr>
               </table>
             </div>
