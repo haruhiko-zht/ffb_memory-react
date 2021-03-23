@@ -371,4 +371,24 @@ export const articleData: ArticleData = {
       },
     ],
   },
+  alchemy: {
+    category: 'レシピ&鉱石',
+    articles: [
+      {
+        id: 1,
+        title: '鉱石一覧表',
+        content: () => <p>準備中</p>,
+      },
+      {
+        id: 2,
+        title: '改造レシピ',
+        content: () => <p>準備中</p>,
+      },
+      {
+        id: 3,
+        title: '鉱石連打記録',
+        content: () => <p>準備中</p>,
+      },
+    ],
+  },
 };

@@ -5,6 +5,7 @@ import 'App.scss';
 import Home from 'components/pages/Home';
 import Capture from 'components/pages/Capture';
 import Survey from 'components/pages/Survey';
+import Alchemy from 'components/pages/Alchemy';
 import OldServer from 'components/pages/OldServer';
 import Picture from 'components/pages/Picture';
 import Tool from 'components/pages/Tool';
@@ -36,6 +37,13 @@ const App: FC = () => {
             <Route
               path=":articleId"
               element={<ArticleContent categoryCode="survey" />}
+            />
+          </Route>
+          <Route path="alchemy" element={<Alchemy />}>
+            <Route path="/" element={<></>} />
+            <Route
+              path=":articleId"
+              element={<ArticleContent categoryCode="alchemy" />}
             />
           </Route>
           <Route path="oldServer" element={<OldServer />}>

@@ -54,7 +54,7 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/alchemy">
             <span>ALCHEMY</span>
             <span>レシピ&鉱石</span>
           </Link>
