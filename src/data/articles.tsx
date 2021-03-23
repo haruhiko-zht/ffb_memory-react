@@ -356,4 +356,19 @@ export const articleData: ArticleData = {
       },
     ],
   },
+  picture: {
+    category: '画像倉庫',
+    articles: [
+      {
+        id: 2,
+        title: 'レア画像',
+        content: () => <p>準備中</p>,
+      },
+      {
+        id: 3,
+        title: '検証画像',
+        content: () => <p>準備中</p>,
+      },
+    ],
+  },
 };
