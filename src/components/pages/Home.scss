@@ -103,8 +103,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 500px;
-  height: 400px;
+  //width: 500px;
+  //height: 400px;
 
   @include mq(lg) {
     position: static;

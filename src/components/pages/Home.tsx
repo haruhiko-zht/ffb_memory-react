@@ -1,13 +1,18 @@
 import { FC } from 'react';
-import Header from '../templates/Header';
-import Footer from '../templates/Footer';
-import './Home.scss';
-import ffbBanner from '../../images/home/ffb_banner.jpg';
-import rankingBanner from '../../images/home/ranking_banner.jpg';
-import twitterBanner from '../../images/home/twitter_banner.png';
+import { Helmet } from 'react-helmet';
+
+import 'components/pages/Home.scss';
+import Header from 'components/templates/Header';
+import Footer from 'components/templates/Footer';
+import ffbBanner from 'images/home/ffb_banner.jpg';
+import rankingBanner from 'images/home/ranking_banner.jpg';
+import twitterBanner from 'images/home/twitter_banner.png';
 
 const Home: FC = () => (
   <>
+    <Helmet>
+      <title>FFB memory</title>
+    </Helmet>
     <Header />
     <main className="index">
       <p className="menu-desc">あたま悪いFFB偽攻略サイト</p>
@@ -51,8 +56,8 @@ const Home: FC = () => (
           <div className="news-update">update here.</div>
         </div>
       </section>
+      <div className="bottom-logo">FFB memory</div>
     </main>
-    <div className="bottom-logo">FFB memory</div>
     <Footer />
   </>
 );

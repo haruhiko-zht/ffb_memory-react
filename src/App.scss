@@ -3,9 +3,15 @@
 @import 'responsive';
 @import 'common';
 
-.main-bg {
+.app-bg {
   @include bg-cover;
 
   z-index: -1;
   background: url('images/app/back.jpg') center center/cover no-repeat;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }

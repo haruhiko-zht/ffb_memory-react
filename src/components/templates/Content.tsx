@@ -13,7 +13,7 @@ type Props = {
 
 const Content: FC<Props> = ({ categoryCode, category, articles }) => (
   <>
-    <main>
+    <main className="main-article">
       <div className="main-title">
         <div className="title-wrap">
           <h2>{category}</h2>

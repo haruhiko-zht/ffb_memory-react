@@ -42,7 +42,7 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/capture">
             <span>CAPTURE</span>
             <span>攻略備忘録</span>
           </Link>
@@ -54,7 +54,7 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/alchemy">
             <span>ALCHEMY</span>
             <span>レシピ&鉱石</span>
           </Link>
@@ -66,19 +66,19 @@ const Header: FC = () => (
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/picture">
             <span>PICTURE</span>
             <span>画像倉庫</span>
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/tool">
             <span>TOOL</span>
             <span>ツール</span>
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/">
+          <Link className="btn" to="/links">
             <span>LINK</span>
             <span>リンク</span>
           </Link>
