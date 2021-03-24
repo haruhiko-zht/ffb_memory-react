@@ -7,6 +7,7 @@ import Footer from 'components/templates/Footer';
 import ffbBanner from 'images/home/ffb_banner.jpg';
 import rankingBanner from 'images/home/ranking_banner.jpg';
 import twitterBanner from 'images/home/twitter_banner.png';
+import { updateHistoryData } from 'data/update-histories';
 
 const Home: FC = () => (
   <>
@@ -53,7 +54,20 @@ const Home: FC = () => (
               <span className="hide">NEWS</span>
             </a>
           </div>
-          <div className="news-update">update here.</div>
+          <div className="news-update">
+            {updateHistoryData ? (
+              updateHistoryData.map((history) => (
+                <>
+                  <span key={history.id}>
+                    {history.date} --- {history.outline}
+                  </span>
+                  <br />
+                </>
+              ))
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </section>
       <div className="bottom-logo">FFB memory</div>
