@@ -3,9 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import 'components/pages/Home.scss';
 import Header from 'components/templates/Header';
+import LinksContent from 'containers/organisms/LinksContent';
 import Footer from 'components/templates/Footer';
-import ffbBanner from 'images/home/ffb_banner.jpg';
-import rankingBanner from 'images/home/ranking_banner.jpg';
 import twitterBanner from 'images/home/twitter_banner.png';
 import { updateHistoryData } from 'data/update-histories';
 
@@ -19,25 +18,7 @@ const Home: FC = () => (
       <p className="menu-desc">あたま悪いFFB偽攻略サイト</p>
 
       {/* link contents */}
-      <section className="links-content">
-        <div className="links-content-main">
-          <div className="links-content-banner">
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              <img src={ffbBanner} alt="ff battle banner" />
-            </a>
-          </div>
-          <div className="links-content-banner">
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              <img src={rankingBanner} alt="ffb level ranking banner" />
-            </a>
-          </div>
-        </div>
-        <div className="links-content-tab">
-          <a href="/">
-            <span className="hide">LINKS</span>
-          </a>
-        </div>
-      </section>
+      <LinksContent />
 
       {/* news contents */}
       <section className="news-content">
