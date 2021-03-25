@@ -1,0 +1,134 @@
+@import '../../reset';
+@import '../../variable';
+@import '../../responsive';
+@import '../../common';
+
+.news-content {
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  //width: 500px;
+  //height: 400px;
+  transition: all 0.5s;
+
+  &-open {
+    right: 0;
+  }
+
+  &-close {
+    right: -470px;
+  }
+
+  @include mq(lg) {
+    position: static;
+    width: 100%;
+    height: 120px;
+  }
+
+  &-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: $space_xxl;
+    text-align: right;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+
+    @include mq(lg) {
+      display: none;
+    }
+
+    .news-banner {
+      width: 253px;
+      margin-bottom: $space_m;
+      overflow: hidden;
+      border-radius: 3px;
+
+      img:hover {
+        -webkit-animation: newsbanneranimate 0.7s;
+        animation: newsBannerAnimate 0.7s;
+
+        @include mq(lg) {
+          animation: none;
+        }
+      }
+    }
+  }
+
+  &-sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 120px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+
+    .news-tab {
+      width: 30px;
+      overflow: hidden;
+      background-image: url('../../images/app/news_tab.png');
+      background-repeat: no-repeat;
+
+      &-open {
+        background-position: left top;
+      }
+
+      &-close {
+        background-position: left bottom;
+      }
+
+      @include mq(lg) {
+        display: none;
+      }
+
+      a {
+        display: block;
+        height: 120px;
+      }
+    }
+
+    .news-update {
+      width: 470px;
+      padding-right: $space_xl;
+      padding-left: $space_xl;
+      overflow-y: scroll;
+
+      @include mq(lg) {
+        padding-right: $space_l;
+        padding-left: $space_l;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes newsBannerAnimate {
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes newsBannerAnimate {
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

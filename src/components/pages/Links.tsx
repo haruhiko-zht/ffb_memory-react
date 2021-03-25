@@ -59,10 +59,14 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      FF BATTLE
+                      <h3>FF BATTLE</h3>
                     </a>
                   </th>
-                  <td>ミラー３</td>
+                  <td>
+                    ミラー３
+                    <br />
+                    現存する最後のkroko氏運営によるFF BATTLEサーバー。
+                  </td>
                 </tr>
                 <tr>
                   <th>
@@ -71,11 +75,13 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      レビュー注意事項
+                      <h3>レビュー注意事項</h3>
                     </a>
                   </th>
                   <td>
-                    鉱石が欲しくてレビューする人は注意事項をまず読むといいです。
+                    レビュー鉱石が欲しくてレビューする人は注意事項をまず読むといいです。
+                    <br />
+                    2021年3月22日現在、XOOPS削除に伴いレビューが機能しているかは不明。
                   </td>
                 </tr>
               </table>
@@ -89,24 +95,14 @@ const Links: FC = () => (
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      FF BATTLE資料小屋
+                      <h3>FF BATTLE資料小屋</h3>
                     </a>
                   </th>
                   <td>
-                    武器や防具などの各種データが集まっています。貴重なサイト。
+                    武器や防具などの各種データが集まっています。
+                    <br />
+                    2021年3月22日のXOOPS削除に伴い現存する唯一のデータサイトになっていると思います。
                   </td>
-                </tr>
-                <tr>
-                  <th>
-                    <a
-                      href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRe_uSvjnXxeoOHUM5raepGoeKV-opnxaWiY4o3jwjznSNTFJ2D_tDL0XwOyYP3rQ7QdqhNuauujg0B/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      鉱石一覧表
-                    </a>
-                  </th>
-                  <td>鉱石の種類・価格・倍率を一覧表にしたもの。</td>
                 </tr>
               </table>
             </div>
@@ -141,7 +137,7 @@ const Links: FC = () => (
                   <td>
                     Comrade of FFB
                     <br />
-                    専用ch「Y168」で活動しているそうです。会話好きな人はおすすめ。
+                    専用ch「Y168」で活動しているそうです。
                   </td>
                 </tr>
                 <tr>
@@ -157,7 +153,7 @@ const Links: FC = () => (
                   <td>
                     ぽぽぽ隊
                     <br />
-                    1st鯖を中心に2002年から活動している部隊です。
+                    1st鯖を中心に2002年から活動していた部隊です。
                   </td>
                 </tr>
                 <tr>
@@ -189,7 +185,7 @@ const Links: FC = () => (
                   <td>
                     ごごご部隊
                     <br />
-                    専用chは「gbi」だそうです。通話好きな人はおすすめ。
+                    専用chは「gbi」だったそうです。
                   </td>
                 </tr>
                 <tr>
@@ -205,7 +201,7 @@ const Links: FC = () => (
                   <td>
                     毬藻同盟
                     <br />
-                    「一度はどこかで見た」という有名な人が多い部隊です。
+                    「一度はどこかで見た」という有名な人が多い部隊でした。
                   </td>
                 </tr>
               </table>
@@ -235,7 +231,9 @@ const Links: FC = () => (
                     </a>
                   </th>
                   <td>
-                    前人未到の570万レベルを達成した方のサイト。部隊は解散して個人運営の模様。
+                    前人未到の570万レベルを達成した方のサイト。
+                    <br />
+                    部隊は解散して個人運営の模様。
                   </td>
                 </tr>
                 <tr>
@@ -248,7 +246,11 @@ const Links: FC = () => (
                       <h3>あるとぶろぐ</h3>
                     </a>
                   </th>
-                  <td>あるとさんのブログ。500万レベルの軌跡です。</td>
+                  <td>
+                    あるとさんのブログ。
+                    <br />
+                    500万レベルの軌跡です。
+                  </td>
                 </tr>
               </table>
             </div>

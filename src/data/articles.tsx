@@ -376,8 +376,15 @@ export const articleData: ArticleData = {
     articles: [
       {
         id: 1,
-        title: '鉱石一覧表',
-        content: () => <p>準備中</p>,
+        title: '鉱石一覧表(ロード長)',
+        content: () => (
+          <>
+            <iframe
+              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRe_uSvjnXxeoOHUM5raepGoeKV-opnxaWiY4o3jwjznSNTFJ2D_tDL0XwOyYP3rQ7QdqhNuauujg0B/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+              title="google spread sheet"
+            />
+          </>
+        ),
       },
       {
         id: 2,
