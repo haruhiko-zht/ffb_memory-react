@@ -11,6 +11,8 @@
   #link-area div[id*='link'] {
     display: none;
   }
+  #tab0:checked ~ #link-area #link0 { display: block; }
+  #tab0:checked ~ #link-tab .link0_label { opacity: 1; }
   #tab1:checked ~ #link-area #link1 { display: block; }
   #tab1:checked ~ #link-tab .link1_label { opacity: 1; }
   #tab2:checked ~ #link-area #link2 { display: block; }
@@ -19,6 +21,10 @@
   #tab3:checked ~ #link-tab .link3_label { opacity: 1; }
   #tab4:checked ~ #link-area #link4 { display: block; }
   #tab4:checked ~ #link-tab .link4_label { opacity: 1; }
+  #tab5:checked ~ #link-area #link5 { display: block; }
+  #tab5:checked ~ #link-tab .link5_label { opacity: 1; }
+  #tab6:checked ~ #link-area #link6 { display: block; }
+  #tab6:checked ~ #link-tab .link6_label { opacity: 1; }
 }
 
 #link-tab {
