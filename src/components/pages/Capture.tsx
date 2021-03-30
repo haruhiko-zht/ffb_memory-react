@@ -8,10 +8,13 @@ import Footer from 'components/templates/Footer';
 const Capture: FC = () => (
   <>
     <Helmet>
-      <title>攻略備忘録</title>
+      <title>攻略備忘録 | FFB memory</title>
     </Helmet>
+
     <Header />
+
     <Content categoryCode="capture" />
+
     <Footer />
   </>
 );
