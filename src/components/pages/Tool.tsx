@@ -87,12 +87,19 @@ const Tool: FC = () => {
             <h3>鉱石カウント</h3>
             <p>所持している鉱石をカウントします。</p>
             <p>
-              使い方は鍛冶屋のページでWindowsなら&quot;Ctrl+U&quot;、Macなら&quot;⌥⌘U&quot;でソースコードを表示させます。出てきたサイトのコードを&quot;Ctrl+A(⌘A)&quot;で全選択し、&quot;Ctrl+C(⌘C)&quot;で全コピーします。後は以下のテキストボックスに&quot;Ctrl+V(⌘V)&quot;で貼付けして&quot;OK&quot;を押していただければ結果が表示されます。
+              使い方は鍛冶屋のページでWindowsなら&quot;Ctrl+U&quot;、Macなら&quot;⌥⌘U&quot;でソースコードを表示させます。
+              出てきたサイトのコードを&quot;Ctrl+A(⌘A)&quot;で全選択し、&quot;Ctrl+C(⌘C)&quot;で全コピーします。
+              後は以下のテキストボックスに&quot;Ctrl+V(⌘V)&quot;で貼付けして&quot;OK&quot;を押していただければ結果が表示されます。
             </p>
             <p>version:4.0</p>
             <form className="responsive-form">
-              <textarea wrap="off" ref={textareaRef} />
-              <input type="button" value="OK" onClick={count} />
+              <textarea
+                className="ore-calc-input"
+                wrap="off"
+                rows={5}
+                ref={textareaRef}
+              />
+              <input type="button" value="カウント開始" onClick={count} />
               <input type="reset" value="クリア" onClick={reset} />
             </form>
             <div className="ore-calc-result">
