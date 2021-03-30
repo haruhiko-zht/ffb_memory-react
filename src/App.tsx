@@ -8,8 +8,8 @@ import Survey from 'components/pages/Survey';
 import Alchemy from 'components/pages/Alchemy';
 import OldServer from 'components/pages/OldServer';
 import Picture from 'components/pages/Picture';
-import Tool from 'components/pages/Tool';
-import Links from 'components/pages/Links';
+import Tool from 'containers/pages/Tool';
+import Links from 'containers/pages/Links';
 import ArticleContent from 'containers/organisms/ArticleContent';
 
 const App: FC = () => {
