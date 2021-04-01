@@ -12,7 +12,7 @@ const EnhancedTool: FC = () => {
   const [oreResult, updateResult] = useState<Ore[]>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const parse = (rawText: string): void => {
+  const parse = (rawText: string): Ore[] => {
     const result: Ore[] = [];
     const topStr = '鉱石の価値</th><tr>';
     const botStr = '</table>';
@@ -22,36 +22,53 @@ const EnhancedTool: FC = () => {
       'i',
     );
 
-    const ores = rawText
+    return rawText
       .substring(
         rawText.indexOf(topStr) + topStr.length,
         rawText.indexOf(botStr, rawText.indexOf(topStr)),
       )
       .split(splitStr)
-      .map((str) => {
-        const match = re.exec(str);
-
-        return match ? { name: match[2], price: match[3] } : null;
-      });
-
-    ores.forEach((h) => {
-      if (h) {
-        const index = result.findIndex(
-          (l) => l.name === h.name && l.price === h.price,
-        );
-        if (index > -1) {
-          result[index].num += 1;
-        } else {
-          result.push({ name: h.name, price: h.price, num: 1 });
+      .reduce((accumulator, currentValue) => {
+        const match = re.exec(currentValue);
+        if (match) {
+          const index = accumulator.findIndex(
+            (ore) => ore.name === match[2] && ore.price === match[3],
+          );
+          if (index > -1) {
+            accumulator[index].num += 1;
+          } else {
+            accumulator.push({ name: match[2], price: match[3], num: 1 });
+          }
         }
-      }
-    });
 
-    updateResult(result);
+        return accumulator;
+      }, result)
+      .sort((a, b) => {
+        const nameA = a.name.toUpperCase();
+        const nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        const priceA = Number.parseFloat(a.price);
+        const priceB = Number.parseFloat(b.price);
+        if (priceA < priceB) {
+          return -1;
+        }
+        if (priceA > priceB) {
+          return 1;
+        }
+
+        return 0;
+      });
   };
 
   const count = (): void => {
-    parse(textareaRef.current?.value ?? '');
+    const result = parse(textareaRef.current?.value ?? '');
+    updateResult(result);
   };
 
   const reset = (): void => {
