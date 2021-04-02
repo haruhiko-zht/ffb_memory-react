@@ -3,12 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Header from 'components/templates/Header';
 import Footer from 'components/templates/Footer';
-
-type Ore = {
-  name: string;
-  price: string;
-  num: number;
-};
+import { Ore } from 'hooks/use-ore-counter';
 
 type Props = {
   count: () => void;
@@ -46,7 +41,7 @@ const Tool: FC<Props> = ({
             出てきたサイトのコードを&quot;Ctrl+A(⌘A)&quot;で全選択し、&quot;Ctrl+C(⌘C)&quot;で全コピーします。
             後は以下のテキストボックスに&quot;Ctrl+V(⌘V)&quot;で貼付けして&quot;OK&quot;を押していただければ結果が表示されます。
           </p>
-          <p>version:4.0</p>
+          <p>version:5.0.0</p>
           <form className="responsive-form">
             <textarea
               className="ore-calc-input"
