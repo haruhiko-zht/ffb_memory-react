@@ -1,4 +1,4 @@
-import { RefObject, useRef, useState } from 'react';
+import { RefObject, SyntheticEvent, useRef, useState } from 'react';
 
 export type Ore = {
   name: string;
@@ -9,7 +9,7 @@ export type Ore = {
 export const useOreCounter = (): [
   Ore[],
   RefObject<HTMLTextAreaElement>,
-  () => void,
+  (e: SyntheticEvent) => void,
   () => void,
 ] => {
   const [oreResult, updateResult] = useState<Ore[]>([]);
@@ -61,7 +61,9 @@ export const useOreCounter = (): [
       });
   };
 
-  const count = (): void => {
+  const count = (e: SyntheticEvent): void => {
+    e.preventDefault();
+
     const result = parse(textareaRef.current?.value ?? '');
     updateResult(result);
   };

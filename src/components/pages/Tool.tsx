@@ -1,4 +1,4 @@
-import { FC, RefObject } from 'react';
+import { FC, RefObject, SyntheticEvent } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Header from 'components/templates/Header';
@@ -6,7 +6,7 @@ import Footer from 'components/templates/Footer';
 import { Ore } from 'hooks/use-ore-counter';
 
 type Props = {
-  count: () => void;
+  count: (e: SyntheticEvent) => void;
   reset: () => void;
   textareaRef?: RefObject<HTMLTextAreaElement>;
   oreResult: Ore[];
