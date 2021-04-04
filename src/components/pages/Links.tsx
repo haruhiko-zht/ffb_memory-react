@@ -30,13 +30,19 @@ const Links: FC<Props> = ({ links }) => (
           {Object.keys(linkTypes).map((type, index) =>
             index === 0 ? (
               <input
+                key={type}
                 id={`tab${index}`}
                 type="radio"
                 name="link_btn"
                 defaultChecked
               />
             ) : (
-              <input id={`tab${index}`} type="radio" name="link_btn" />
+              <input
+                key={type}
+                id={`tab${index}`}
+                type="radio"
+                name="link_btn"
+              />
             ),
           )}
 
@@ -60,26 +66,28 @@ const Links: FC<Props> = ({ links }) => (
             {Object.keys(linkTypes).map((type, index) => (
               <div key={type} id={`link${index}`}>
                 <table>
-                  {links
-                    .filter((link) => link.type === type)
-                    .map((link) => (
-                      <tr key={link.id}>
-                        <th>
-                          <a
-                            href={link.url}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                          >
-                            {link.image ? (
-                              <img src={link.image} alt={link.title} />
-                            ) : (
-                              <h3>{link.title}</h3>
-                            )}
-                          </a>
-                        </th>
-                        <td>{link.overview}</td>
-                      </tr>
-                    ))}
+                  <tbody>
+                    {links
+                      .filter((link) => link.type === type)
+                      .map((link) => (
+                        <tr key={link.id}>
+                          <th>
+                            <a
+                              href={link.url}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
+                              {link.image ? (
+                                <img src={link.image} alt={link.title} />
+                              ) : (
+                                <h3>{link.title}</h3>
+                              )}
+                            </a>
+                          </th>
+                          <td>{link.overview}</td>
+                        </tr>
+                      ))}
+                  </tbody>
                 </table>
               </div>
             ))}
